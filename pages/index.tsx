@@ -11,7 +11,7 @@ import {
   Main,
   SubTitle,
   Title,
-} from "./style";
+} from "../components/style";
 
 export async function getServerSideProps() {
   const projects = await prisma.project.findMany();
