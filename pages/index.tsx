@@ -13,7 +13,7 @@ import {
   Title,
 } from "../components/style";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const projects = await prisma.project.findMany();
   return {
     props: {
