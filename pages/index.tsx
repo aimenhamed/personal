@@ -35,25 +35,30 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
-        <Title>
-          Hello 👋🏻 <br />
-          My name is Aimen Hamed.
-        </Title>
-        <Description>
-          I am a Software Engineer at Optus. <br />I love creating developer
-          friendly tools, and everything web.
-        </Description>
-        <Description style={{ margin: "0 0 4rem" }}>
-          You can find me on{" "}
-          <Link href="https://github.com/aimenhamed">GitHub</Link> and{" "}
-          <Link href="https://www.linkedin.com/in/aimen-hamed/">Linkedin</Link>.
-        </Description>
-        <SubTitle>Projects</SubTitle>
-        <Grid>
-          {projects.map((project) => (
-            <Card key={project.id} {...project} />
-          ))}
-        </Grid>
+        <div>
+          <Title>
+            Hello 👋🏻 <br />
+            My name is Aimen Hamed.
+          </Title>
+          <Description>
+            I am a Software Engineer at Optus. <br />I love creating developer
+            friendly tools, and everything web.
+          </Description>
+          <Description style={{ margin: "0 0 4rem" }}>
+            You can find me on{" "}
+            <Link href="https://github.com/aimenhamed">GitHub</Link> and{" "}
+            <Link href="https://www.linkedin.com/in/aimen-hamed/">
+              Linkedin
+            </Link>
+            .
+          </Description>
+          <SubTitle>Projects</SubTitle>
+          <Grid>
+            {projects.map((project) => (
+              <Card key={project.id} {...project} />
+            ))}
+          </Grid>
+        </div>
       </Main>
       <Footer />
     </Container>

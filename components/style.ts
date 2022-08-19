@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 0 35rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @media (max-width: 600px) {
+    padding: 0 4rem;
+  }
 `;
 
 export const Main = styled.main`
@@ -18,10 +24,12 @@ export const Title = styled.h1`
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  @media (max-width: 600px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const SubTitle = styled.h2`
-  width: 97.5%;
   margin: 0 0 2rem;
   line-height: 1.15;
   font-size: 2rem;
@@ -31,7 +39,6 @@ export const Description = styled.p`
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
-  width: 97.5%;
 `;
 
 export const Link = styled.a`
