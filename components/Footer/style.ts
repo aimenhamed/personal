@@ -15,12 +15,19 @@ export const Container = styled.footer`
 
 export const SocialIcons = styled.a`
   transition: 0.3s ease;
-  color: white;
+  color: black;
   border-radius: 50px;
   padding: 8px;
   &:hover {
-    background-color: #212d45;
+    background-color: lightgrey;
+    @media (prefers-color-scheme: dark) {
+      background-color: #212d45;
+    }
     transform: scale(1.2);
     cursor: pointer;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
   }
 `;
