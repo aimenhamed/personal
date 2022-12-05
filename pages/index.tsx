@@ -41,8 +41,9 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
             My name is Aimen Hamed.
           </Title>
           <Description>
-            I am a Software Engineer at Optus. <br />I love creating developer
-            friendly tools, and everything web.
+            I am an <b>SRE</b> at <b>Atlassian</b>. Previously, a Software
+            Engineer at <b>Optus</b>. <br />I love creating developer friendly
+            tools, and everything web.
           </Description>
           <Description style={{ margin: "0 0 4rem" }}>
             You can find me on{" "}
