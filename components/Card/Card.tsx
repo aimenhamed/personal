@@ -1,5 +1,5 @@
+import { Project } from "../../projects";
 import { Container, Description, Title } from "./style";
-import { Project } from "../../lib/prisma";
 
 function Card({ title, description, link }: Project) {
   return (

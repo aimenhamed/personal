@@ -1,4 +1,3 @@
-import { prisma, Project } from "../lib/prisma";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Card from "../components/Card/Card";
@@ -12,21 +11,9 @@ import {
   SubTitle,
   Title,
 } from "../components/style";
+import { PROJECTS } from "../projects";
 
-export async function getStaticProps() {
-  const projects = await prisma.project.findMany();
-  return {
-    props: {
-      projects,
-    },
-  };
-}
-
-type HomeProps = {
-  projects: Project[];
-};
-
-const Home: NextPage<HomeProps> = ({ projects }) => {
+const Home: NextPage = () => {
   return (
     <Container>
       <Head>
@@ -41,9 +28,10 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
             My name is Aimen Hamed.
           </Title>
           <Description>
-            I am a <b>Software Engineer</b> at <b>Zip</b>. Previously, an SRE at{" "}
-            <b>Atlassian</b>, and Software Engineer at <b>Optus</b>. <br />I
-            love creating developer friendly tools, and everything web.
+            I am a <b>Software Engineer</b> at <b>Atlassian</b>. Previously, a
+            Platform Engineer at <b>Zip</b>, and Software Engineer at{" "}
+            <b>Optus</b>. <br />I love creating developer friendly tools, and
+            everything web.
           </Description>
           <Description style={{ margin: "0 0 4rem" }}>
             You can find me on{" "}
@@ -55,7 +43,7 @@ const Home: NextPage<HomeProps> = ({ projects }) => {
           </Description>
           <SubTitle>Projects</SubTitle>
           <Grid>
-            {projects.map((project) => (
+            {PROJECTS.map((project) => (
               <Card key={project.id} {...project} />
             ))}
           </Grid>
